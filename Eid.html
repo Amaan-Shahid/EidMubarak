@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #1b5e20, #4caf50);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            width: 90%;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        p {
+            font-size: 1.2em;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .crescent {
+            font-size: 3em;
+            animation: bounce 1.5s infinite;
+        }
+        .btn {
+            background: #ffd700;
+            border: none;
+            color: #1b5e20;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #ffeb3b;
+        }
+        .hidden-message {
+            display: none;
+            background: white;
+            color: #1b5e20;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .btn {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
+            .crescent {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌙 Eid Mubarak! 🎉</h1>
+        <p>May this Eid bring happiness, prosperity, and endless blessings to you and your family!</p>
+        <div class="crescent">🌙✨</div>
+        <button class="btn" onclick="showMessage()">Open Your Eid Surprise 🎁</button>
+        <div id="message" class="hidden-message">💖 Wishing you a joyous Eid filled with love, laughter, and special moments with your loved ones! 🌟</div>
+    </div>
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
